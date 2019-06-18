@@ -17,7 +17,7 @@ namespace RssDownloader
         {
             bool download = true;
             string filename = String.Empty;
-            string saveToParent = @"c:\twit\ScottSigler\";
+            string saveToParent = @"C:\Users\ispa2\OneDrive\Podcast Archive\Scott Sigler\";
 
             if (args[0].Length == 0)
             {
