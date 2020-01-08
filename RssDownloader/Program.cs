@@ -58,6 +58,8 @@ namespace RssDownloader
                             // Download the files
                             using (var webClient = new WebClient())
                             {
+                                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+
                                 filename = UrlHelper.GetFileName(enclosure);
                                 if (!File.Exists(String.Format("{0}{1}", folderName, filename)))
                                 {
@@ -68,6 +70,7 @@ namespace RssDownloader
                                     }
                                     catch (WebException e)
                                     {
+                                        int x = 0;
                                         //File.AppendAllText(errorLogFile, episode.video_audio.mediaUrl.Value + " returned the error: " + e.Message + "\n");
                                     }
 
